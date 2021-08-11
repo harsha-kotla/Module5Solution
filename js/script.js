@@ -32,7 +32,7 @@ var insertHtml = function (selector, html) {
 // Show loading icon inside element identified by 'selector'.
 var showLoading = function (selector) {
   var html = "<div class='text-center'>";
-  html += "<img src='images/ajax-loader.gif'></div>";
+  html += "<img src='https://raw.githubusercontent.com/jhu-ep-coursera/fullstack-course4/master/assignments/assignment5/assignment5-solution-starter/images/ajax-loader.gif'></div>";
   insertHtml(selector, html);
 };
 
@@ -83,8 +83,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
-  buildAndShowHomeHTML // ***** <---- TODO: STEP 1: Substitute [...] ******
-  ); // Explicitly setting the flag to get JSON from server processed into an object literal
+  buildAndShowHomeHTML, // ***** <---- TODO: STEP 1: Substitute [...] ******
+  true); // Explicitly setting the flag to get JSON from server processed into an object literal
 });
 // *** finish **
 
@@ -115,7 +115,7 @@ function buildAndShowHomeHTML (categories) {
       // Hint: you need to surround the chosen category short name with something before inserting
       // it into the home html snippet.
       //
-      // var homeHtmlToInsertIntoMainPage = ....
+      var homeHtmlToInsertIntoMainPage = dc.loadMenuItems(chosenCategoryShortName)
 
 
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
