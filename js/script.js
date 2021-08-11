@@ -32,7 +32,7 @@ var insertHtml = function (selector, html) {
 // Show loading icon inside element identified by 'selector'.
 var showLoading = function (selector) {
   var html = "<div class='text-center'>";
-  html += "<img src='https://raw.githubusercontent.com/jhu-ep-coursera/fullstack-course4/master/assignments/assignment5/assignment5-solution-starter/images/ajax-loader.gif'></div>";
+  html += "<img src='images/ajax-loader.gif'></div>";
   insertHtml(selector, html);
 };
 
@@ -101,9 +101,9 @@ function buildAndShowHomeHTML (categories) {
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
       // variable's name implies it expects.
-      // var chosenCategoryShortName = 
+      // var chosenCategoryShortName = ....
 
-
+      var chosenCategoryShortName = chooseRandomCategory 
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
       // chosen category from STEP 2. Use existing insertProperty function for that purpose.
       // Look through this code for an example of how to do use the insertProperty function.
