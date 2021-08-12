@@ -145,7 +145,7 @@ function chooseRandomCategory(categories) {
   // Choose a random index into the array (from 0 inclusively until array length (exclusively))
   var randomArrayIndex = Math.floor(Math.random() * categories.length);
   console.log(categories[randomArrayIndex])  
-  return categories[2];
+  return categories;
 }
 
 
