@@ -116,7 +116,7 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       // var homeHtmlToInsertIntoMainPage = ....
-      var chosenCategoryShortName = chooseRandomCategory
+      var chosenCategoryShortName = chooseRandomCategory()
       
       
       $ajaxUtils.sendGetRequest(
@@ -142,7 +142,7 @@ function buildAndShowHomeHTML (categories) {
 
 
 // Given array of category objects, returns a random category object.
-function chooseRandomCategory(categories) {
+function chooseRandomCategory() {
   // Choose a random index into the array (from 0 inclusively until array length (exclusively))
   var randomArrayIndex = Math.floor(Math.random() * categories.length);
 
