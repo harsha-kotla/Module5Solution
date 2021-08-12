@@ -116,7 +116,7 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       // var homeHtmlToInsertIntoMainPage = ....
-      var chosenCategoryShortName = chooseRandomCategory()
+      var chosenCategoryShortName = chooseRandomCategory(categories)
       
       
       $ajaxUtils.sendGetRequest(
