@@ -119,12 +119,13 @@ function buildAndShowHomeHTML (categories) {
       var chosenCategoryShortName = chooseRandomCategory()
       
       
-      
-          homeHtml = insertProperty(responseText, 'randomCategoryShortName', chosenCategoryShortName)
-          console.log(homeHtml)
-          document.querySelector("#main-content").innerHTML = homeHtml
-        
-        
+      $ajaxUtils.sendGetRequest(
+        homeHtmlUrl, function (text) {
+          text = insertProperty(text, 'randomCategoryShortName', chosenCategoryShortName)
+          console.log(text)
+          document.querySelector("#main-content").innerHTML = text
+        },
+         false)
       
       
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
