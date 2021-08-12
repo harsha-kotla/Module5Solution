@@ -124,6 +124,7 @@ function buildAndShowHomeHTML (categories) {
            var chosenCategoryShortName = chooseRandomCategory
           responseText = insertProperty(responseText, "randomCategoryShortName", chosenCategoryShortName)
           document.querySelector("#main-content").innerHTML = responseText
+          console.log(responseText)
         },
         false)
       
