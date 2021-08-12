@@ -121,7 +121,7 @@ function buildAndShowHomeHTML (categories) {
       $ajaxUtils.sendGetRequest(
         homeHtmlUrl,
         function (responseText) {
-           var chosenCategoryShortName = chooseRandomCategory(categories)
+           var chosenCategoryShortName = chooseRandomCategory
           responseText = insertProperty(responseText, "randomCategoryShortName", chosenCategoryShortName)
           document.querySelector("#main-content").innerHTML = responseText
         },
